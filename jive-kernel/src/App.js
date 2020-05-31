@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <div className="top-container">
         <div className="top-left-col">
-          NAV COMPONENT
+          <h2>NAV COMPONENT</h2>
         </div>
         <div className="top-right-col">
           USER COMPONENT
