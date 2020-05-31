@@ -1,24 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import KernelEntries from './KernelEntries';
+
+const items = [...Array(100)].map((val, i) => `Item ${i}`);
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload yo mama.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="top-container">
+        <div className="top-left-col">
+          NAV COMPONENT
+        </div>
+        <div className="top-right-col">
+          USER COMPONENT
+        </div>
+      </div>
+      <h1>JIVEKERNEL</h1>
+      <div className="container">
+        <div className="left-col">
+          TBD COMPONENT
+        </div>
+        
+        <div className="right-col">
+          <KernelEntries />
+        </div>
+      </div>
     </div>
   );
 }
