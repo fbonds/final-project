@@ -1,32 +1,50 @@
 import React from 'react';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 import './App.css';
-import KernelEntries from './KernelEntries';
+import Home from './Home';
+import Journal from './Journal';
+import Nav from './Nav';
+import CurrentUser from './CurrentUser';
+import NewEntry from './NewEntry';
 
-const items = [...Array(100)].map((val, i) => `Item ${i}`);
-
-function App() {
-  return (
-    <div className="App">
-      <div className="top-container">
-        <div className="top-left-col">
-          <h2>NAV COMPONENT</h2>
-        </div>
-        <div className="top-right-col">
-          USER COMPONENT
-        </div>
-      </div>
-      <h1>JIVEKERNEL</h1>
-      <div className="container">
-        <div className="left-col">
-          TBD COMPONENT
-        </div>
-        
-        <div className="right-col">
-          <KernelEntries />
-        </div>
-      </div>
+class App extends React.Component {
+  render() {
+    return (
+      
+      <div>
+            <div className="App">
+            <div className="top-container">
+              <div className="top-left-col">
+                {/* <h2><NavBar /></h2> */}
+                <h2>JIVEKERNEL</h2>
+              </div>
+              <div className="top-right-col">
+                <CurrentUser />
+              </div>
+            </div>
+              {/* <h1>JIVEKERNEL</h1> */}
+            <div className="body-container">
+              <div className="left-col">
+                {/* <UsersList /> */}
+                <span>newEntry</span>
+                <NewEntry />
+            </div>
+            <div className="right-col">
+              {/* <KernelEntries /> */}
+              <h2>entries</h2>
+              <Router>
+                <Nav />
+                <Route exact path="/" component={Home} />
+              <Route path="/journal" component={Journal} />
+              </Router>
+            </div>
+          </div>
     </div>
-  );
+
+        {/* <Journal /> */}
+      </div>
+    )
+  }
 }
 
 export default App;
