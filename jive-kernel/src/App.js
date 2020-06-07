@@ -15,33 +15,25 @@ class App extends React.Component {
             <div className="App">
             <div className="top-container">
               <div className="top-left-col">
-                {/* <h2><NavBar /></h2> */}
                 <h2>JIVEKERNEL</h2>
               </div>
               <div className="top-right-col">
                 <CurrentUser />
               </div>
             </div>
-              {/* <h1>JIVEKERNEL</h1> */}
             <div className="body-container">
               <div className="left-col">
-                {/* <UsersList /> */}
-                <span>newEntry</span>
                 <NewEntry />
             </div>
             <div className="right-col">
-              {/* <KernelEntries /> */}
-              <h2>entries</h2>
               <Router>
                 <Nav />
                 <Route exact path="/" component={Home} />
-              <Route path="/journal" component={Journal} />
+                <Route path="/journal" component={Journal} />
               </Router>
             </div>
           </div>
-    </div>
-
-        {/* <Journal /> */}
+       </div>
       </div>
     )
   }

@@ -2,8 +2,6 @@ import React from 'react';
 import db from './db';
 import firebase from 'firebase';
 
-// firebase.auth().currentUser.uid
-
 export default class AddJournalEntry extends React.Component {
     state = { entry: '' };
 

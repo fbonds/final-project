@@ -1,6 +1,4 @@
 import React from 'react';
-import JournalEntries from './JournalEntries';
-import AddJournalEntry from './AddJournalEntry';
 import firebase from 'firebase';
 
 export default class CurrentUser extends React.Component {
@@ -14,13 +12,6 @@ export default class CurrentUser extends React.Component {
                 this.setState({ isSignedIn: !!user });
             }
         );
-        // user = { displayName: 'Brian' }
-        // !user => false
-        // !!user => true
-
-        // user = null
-        // !user => true
-        // !!user => false
     }
 
     componentWillUnmount() {
@@ -35,10 +26,6 @@ export default class CurrentUser extends React.Component {
 
     render() {
         const { isSignedIn } = this.state;
-        // if(isSignedIn) {
-        //     console.log(firebase.auth().currentUser.displayName);
-        // }
-        // 
 
         return (
             <span>
