@@ -8,7 +8,6 @@ export default class Home extends React.Component {
         signInFlow: 'popup',
         signInSuccessUrl: '/journal',
         signInOptions: [
-            firebase.auth.EmailAuthProvider.PROVIDER_ID,
             firebase.auth.GoogleAuthProvider.PROVIDER_ID
         ],
         callbacks: {

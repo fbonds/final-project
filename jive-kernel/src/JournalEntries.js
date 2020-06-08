@@ -15,7 +15,7 @@ export default class JournalEntries extends React.Component {
             .collection('users')
             .doc(uid)
             .collection('journalEntries')
-            .orderBy('createdAt', 'asc')
+            .orderBy('createdAt', 'desc')
             .onSnapshot(snapshot => {
                 this.setState({ journalEntries: snapshot.docs });
             });
@@ -32,9 +32,9 @@ export default class JournalEntries extends React.Component {
             .map(entry => <JournalEntry key={entry.id} entry={entry} />);
 
         return (
-            <ul>
+            <span>
                 {listItems}
-            </ul>
+            </span>
         )
     }
 }
