@@ -15,7 +15,8 @@ class App extends React.Component {
             <div className="App">
             <div className="top-container">
               <div className="top-left-col">
-                <h2>JIVEKERNEL</h2>
+                {/* <h2>JIVEKERNEL</h2> */}
+                <img src='../logo.png' alt='logo'></img>
               </div>
               <div className="top-right-col">
                 <CurrentUser />

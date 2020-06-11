@@ -1,6 +1,5 @@
 import React from 'react';
 import JournalEntries from './JournalEntries';
-import AddJournalEntry from './AddJournalEntry';
 import firebase from 'firebase';
 
 export default class Journal extends React.Component {
