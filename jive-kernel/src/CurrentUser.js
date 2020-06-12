@@ -28,8 +28,9 @@ export default class CurrentUser extends React.Component {
         const { isSignedIn } = this.state;
 
         return (
-            <span>
-                {isSignedIn && firebase.auth().currentUser.displayName}
+            <span className='username'>
+                {isSignedIn && firebase.auth().currentUser.displayName}<b>  </b>  
+                {isSignedIn && <button onClick={this.signOut}>Sign out</button>}
             </span>
         )
     }

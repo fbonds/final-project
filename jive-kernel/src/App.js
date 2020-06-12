@@ -15,11 +15,10 @@ class App extends React.Component {
             <div className="App">
             <div className="top-container">
               <div className="top-left-col">
-                {/* <h2>JIVEKERNEL</h2> */}
-                <img src='../logo.png' alt='logo'></img>
+                <img className='logo' src="../logo.gif" alt='logo'></img>
               </div>
               <div className="top-right-col">
-                <CurrentUser />
+                <CurrentUser className='userName'/>
               </div>
             </div>
             <div className="body-container">
@@ -28,7 +27,7 @@ class App extends React.Component {
             </div>
             <div className="right-col">
               <Router>
-                <Nav />
+              <Nav />
                 <Route exact path="/" component={Home} />
                 <Route path="/journal" component={Journal} />
               </Router>

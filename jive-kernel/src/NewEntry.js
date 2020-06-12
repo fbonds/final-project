@@ -12,9 +12,9 @@ export default class Journal extends React.Component {
             user => {
                 this.setState({ isSignedIn: !!user });
 
-                if (!user) {
-                    this.props.history.push('/');
-                }
+                // if (!user) {
+                //     this.props.history.push('/');
+                // }
             }
         );
     }

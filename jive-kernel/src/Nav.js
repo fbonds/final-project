@@ -5,7 +5,7 @@ class Nav extends React.Component {
     render() {
         return (
             <div>
-                <Link to="/">Home</Link> <Link to="/journal">Journal</Link>
+                {/* I couldn't figure out how to get this to work without the router, but didn't need the route links.. so nothing to do here. */}
             </div>
         )
     }
