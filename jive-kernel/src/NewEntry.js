@@ -11,10 +11,6 @@ export default class Journal extends React.Component {
         this.unregisterAuthObserver = firebase.auth().onAuthStateChanged(
             user => {
                 this.setState({ isSignedIn: !!user });
-
-                // if (!user) {
-                //     this.props.history.push('/');
-                // }
             }
         );
     }

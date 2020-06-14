@@ -1,5 +1,4 @@
 import React from 'react';
-import firebase from 'firebase';
 import JournalEntry from './JournalEntry';
 import db from './db';
 
@@ -9,13 +8,9 @@ export default class JournalEntries extends React.Component {
     }
 
     componentDidMount() {
-        const uid = firebase.auth().currentUser.uid;
-
         this.unsubscribe = db
-            .collection('users')
-            .doc(uid)
             .collection('journalEntries')
-            .orderBy('createdAt', 'desc')
+            .orderBy('likes', 'desc')
             .onSnapshot(snapshot => {
                 this.setState({ journalEntries: snapshot.docs });
             });

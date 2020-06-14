@@ -5,7 +5,8 @@ import firebase from 'firebase';
 export default class AddJournalEntry extends React.Component {
     state = {
         entry: '',
-        isSignedIn: false
+        isSignedIn: false,
+        likeCount: 0
     }
 
     componentDidMount() {
@@ -29,17 +30,15 @@ export default class AddJournalEntry extends React.Component {
     }
 
     addNewEntry = (e) => {
-        const uid = firebase.auth().currentUser.uid;
-
         e.preventDefault();
 
         db
-            .collection('users')
-            .doc(uid)
             .collection('journalEntries')
             .add({
                 name: this.state.entry,
-                createdAt: new Date()
+                createdAt: new Date(),
+                userName: firebase.auth().currentUser.displayName,
+                likes: this.state.likeCount
             }).then(() => {
                 this.setState({ entry: '' });
             });
@@ -57,7 +56,7 @@ export default class AddJournalEntry extends React.Component {
                         value={this.state.entry}
                         onChange={this.onEntryChange}
                     /><br />
-                    <button type="submit">Add New Entry</button>
+                    <button type="submit">Add your Kernel of Wise Jive</button>
                 </form>}
             </div>
         )

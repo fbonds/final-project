@@ -1,5 +1,5 @@
 import React from 'react';
-import firebase from 'firebase';
+import Likes from './Likes';
 
 export default class JournalEntry extends React.Component {
 
@@ -9,7 +9,7 @@ export default class JournalEntry extends React.Component {
         
         return (
             <p style={{ listStyleType: "none", border: "1px solid black", borderRadius: "5px" }}>
-                <span><i>{createDate}</i><br /><b>{firebase.auth().currentUser.displayName} said:<br></br></b>{entry.data().name}<br></br></span>
+                <span><i>{createDate}</i><br /><b>{entry.data().userName} said:<br></br></b>{entry.data().name}<br></br><Likes  key={entry.id} entry={entry} /></span>
             </p>
         )
     }

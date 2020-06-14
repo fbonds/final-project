@@ -20,7 +20,6 @@ export default class Home extends React.Component {
     render() {
         return (
             <div>
-                {/* <h1>Home</h1> */}
                 <p>Sign in:</p>
                 <StyledFirebaseAuth
                     uiConfig={this.uiConfig}

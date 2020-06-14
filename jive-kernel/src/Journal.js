@@ -34,8 +34,7 @@ export default class Journal extends React.Component {
 
         return (
             <div>
-                <h1>Your Kernels of Wisdom</h1>
-                {/* {isSignedIn && <button onClick={this.signOut}>Sign out</button>} */}
+                <h1>Kernels of Wise Jive</h1>
                 <hr />
                 {!isSignedIn && <p>Signing in...</p>}
                 {isSignedIn && <JournalEntries />}

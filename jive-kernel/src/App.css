@@ -28,7 +28,7 @@
   }
 
   .username {
-    color: red;
+    color: rgb(212,199,181);
   }
  
   .body-container {
@@ -48,6 +48,16 @@
   
   .right-col {
     flex: 5;
-    background: white;
     overflow-y: scroll;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Corben', Georgia, Times, serif;
+    text-shadow: 3px 3px 3px rgb(212,199,181);
+  }
+  p {
+    font-family: 'Nobile', Helvetica, Arial, sans-serif;
+    box-shadow: 0 0 0em 0.1em rgb(212,199,181)
+  }
+
+  

@@ -4,12 +4,14 @@
   "private": true,
   "dependencies": {
     "firebase": "^7.14.2",
+    "load-json-file": "^6.2.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-firebaseui": "^4.1.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "write-json-file": "^4.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
