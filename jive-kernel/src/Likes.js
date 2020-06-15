@@ -1,6 +1,7 @@
 import React from 'react';
 import db from './db';
 import firebase from 'firebase';
+import { FaThumbsUp } from 'react-icons/fa'
 
 export default class Likes extends React.Component {
     
@@ -26,10 +27,6 @@ export default class Likes extends React.Component {
         }
     }
 
-    signOut = () => {
-        firebase.auth().signOut();
-    }
-
     onLikeClick = (e) => {
         const { entry } = this.props;
         const updatedLikes = entry.data().likes + 1;
@@ -48,7 +45,7 @@ export default class Likes extends React.Component {
         return (
             <span>
                 Likes: {this.state.likesCount}
-                {isSignedIn && <button onClick={this.onLikeClick}>+</button>}
+                {isSignedIn && <button onClick={this.onLikeClick}><FaThumbsUp /></button>}
             </span>
         )
     }

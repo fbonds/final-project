@@ -9,7 +9,7 @@ export default class JournalEntry extends React.Component {
         
         return (
             <p style={{ listStyleType: "none", border: "1px solid black", borderRadius: "5px" }}>
-                <span><i>{createDate}</i><br /><b>{entry.data().userName} said:<br></br></b>{entry.data().name}<br></br><Likes  key={entry.id} entry={entry} /></span>
+                <span><br></br><i>{createDate}</i><br /><b>{entry.data().userName} said:<br></br></b>{entry.data().name}<br></br>  <Likes  key={entry.id} entry={entry} /><br></br><br></br></span>
             </p>
         )
     }
