@@ -32,6 +32,9 @@ class App extends React.Component {
                 <Route path="/journal" component={Journal} />
               </Router>
             </div>
+            <div className="gutter">
+              <span></span>
+            </div>
           </div>
        </div>
       </div>
