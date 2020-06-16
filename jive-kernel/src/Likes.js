@@ -29,8 +29,10 @@ export default class Likes extends React.Component {
 
     onLikeClick = (e) => {
         const { entry } = this.props;
+        const myName = firebase.auth().currentUser.displayName;
+        const entryName = entry.data().userName;
         const updatedLikes = entry.data().likes + 1;
-        if (updatedLikes) {
+        if (updatedLikes && !(myName === entryName)) {
             db
                 .collection('journalEntries')
                 .doc(entry.id)
